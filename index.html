@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacroX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <img src="IMG/logo.png" alt="Logo MacroX" class="logo">
+        <h1>MacroX</h1>
+
+        <div class="switch-container">
+            <!-- Switch Android -->
+            <div class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" onclick="downloadFile('system.zip')">
+                    <span class="slider"></span>
+                </label>
+                <p>AndroiZAR-(ZIP)</p>
+            </div>
+
+            <!-- Switch SystemConfig -->
+            <div class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" onclick="downloadFile('config.zip')">
+                    <span class="slider"></span>
+                </label>
+                <p>SistemZAR-(ZIP)</p>
+            </div>
+
+            <!-- Switch Build -->
+            <div class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" onclick="downloadFile('build.zip')">
+                    <span class="slider"></span>
+                </label>
+                <p>BuildxZAR-(ZIP)</p>
+            </div>
+
+            <!-- Switch Licencia -->
+            <div class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" onclick="downloadFile('licencia.txt')">
+                    <span class="slider"></span>
+                </label>
+                <p>   LicenxZAR-(ZIP)</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

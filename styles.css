@@ -1,0 +1,161 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Background Overlay with Subtle Animation */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('IMG/background.jpg') no-repeat center center/cover;
+    opacity: 0.4;
+    animation: moveBackground 15s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Container Styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: 0.4s all;
+    position: relative;
+}
+
+/* Logo Styling */
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Switch Container */
+.switch-container {
+    display: grid;
+    gap: 30px;
+}
+
+/* Each Switch Wrapper */
+.switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+/* Hover effect for switch-wrapper */
+.switch-wrapper:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 500;
+    padding-left: 50px; /* Separa el texto hacia la derecha */
+}
+
+/* Switch Styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 36px;
+    margin-right: 50px; /* Separa el switch hacia la izquierda */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(34px);
+}
+
+/* Notification Styling */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00c851;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
